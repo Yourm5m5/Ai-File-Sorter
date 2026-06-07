@@ -13,9 +13,8 @@ The **Ai-File-Sorter** is a desktop automation utility built in Python using the
 The application processes files using a strict, multi-tier execution pipeline designed for safety and speed:
 
 1. **Project Guard Rails & Exclusions:** The script scans your target path. If it identifies folder structures containing development markers (like `.git`, `node_modules`, `venv`, or project solution files), it pauses and prompts you with a confirmation window. You can uncheck these folders so your active code workspaces stay untouched.
-2. **Sensitive Data Shielding:** Filenames matching privacy patterns or containing explicit keywords (such as `password`, `secret`, `vault`, or `private`) are blocked from entering the batch arrays entirely.
-3. **Local Cache Signatures:** To reduce unnecessary AI overhead, the app generates a temporary signature hash for file types. Recurring files are matched instantly using this local cache.
-4. **Local LLM Evaluation:** Uncached items are compiled into chunks and evaluated locally by Ollama. The AI assigns an optimal, nested directory path (e.g., changing a chaotic layout of mechanical drawings, receipts, and audio samples into organized tracks like `3D_Models_and_CAD/Mechanical_Parts`, `Documents/Invoices`, and `Media/Audio`).
+2. **Local Cache Signatures:** To reduce unnecessary AI overhead, the app generates a temporary signature hash for file types. Recurring files are matched instantly using this local cache.
+3. **Local LLM Evaluation:** Uncached items are compiled into chunks and evaluated locally by Ollama. The AI assigns an optimal, nested directory path (e.g., changing a chaotic layout of mechanical drawings, receipts, and audio samples into organized tracks like `3D_Models_and_CAD/Mechanical_Parts`, `Documents/Invoices`, and `Media/Audio`).
 
 ---
 

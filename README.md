@@ -36,8 +36,11 @@ ollama run llama3.2:1b "Ready?"; pythonw cleaner.py
 ### 2. Start and Warm Up the AI Model
 Ensure Ollama is running on your machine, then pull and pre-load the ultra-fast llama3.2:1b model. This eliminates cold-start lag when you trigger a deep scan:
 
-'''Bash
-ollama run llama3.2:1b "Ready?"'''
+```
+Bash
+ollama run llama3.2:1b "Ready?"
+```
+
 Once the model replies, type /exit to return to your normal terminal. The model will remain warm in your system RAM.
 
 ### 3. Set Up an Isolated Virtual Environment
@@ -45,27 +48,36 @@ Creating a virtual environment ensures the application dependencies don't interf
 
 Windows (PowerShell):
 
-'''PowerShell
+```
+PowerShell
 python -m venv .venv
-.venv\Scripts\Activate.ps1'''
+.venv\Scripts\Activate.ps1
+```
 macOS / Linux:
 
-'''Bash
+```
+Bash
 python3 -m venv .venv
-source .venv/bin/activate'''
+source .venv/bin/activate
+```
 
 ###4. Install Runtime Dependencies
 Upgrade your local package manager and pull down the official Ollama library interface module:
 
-'''Bash
+```
+Bash
 pip install --upgrade pip
-pip install ollama'''
+pip install ollama
+```
 
 ### 5. Launch the Application
 Execute the script from your active environment terminal prompt:
 
-'''Bash
+```
+Bash
 python cleaner.py
+```
+
 (Windows users who want to run the application cleanly without leaving a black console window hanging open in the background can launch using pythonw cleaner.py instead).'''
 
 ###⚠️ Disclaimer & Limitations

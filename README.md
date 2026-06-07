@@ -25,9 +25,14 @@ Follow these quick terminal steps to get the environment configured and the appl
 
 ### 1. Download or Clone the Tool
 Either clone the repository using Git or download the source ZIP file directly from GitHub and extract it to your machine.
-'''bash
-git clone [https://github.com/YOUR_USERNAME/Ai-File-Sorter.git](https://github.com/YOUR_USERNAME/Ai-File-Sorter.git)
-cd Ai-File-Sorter'''
+
+```
+powershell
+git clone [https://github.com/YOUR_USERNAME/Ai-File-Sorter.git](https://github.com/YOUR_USERNAME/Ai-File-Sorter.git); cd Ai-File-Sorter; python -m venv .venv
+.venv\Scripts\Activate.ps1; pip install --upgrade pip; pip install ollama
+ollama run llama3.2:1b "Ready?"; pythonw cleaner.py
+```
+
 ### 2. Start and Warm Up the AI Model
 Ensure Ollama is running on your machine, then pull and pre-load the ultra-fast llama3.2:1b model. This eliminates cold-start lag when you trigger a deep scan:
 

@@ -25,43 +25,45 @@ Follow these quick terminal steps to get the environment configured and the appl
 
 ### 1. Download or Clone the Tool
 Either clone the repository using Git or download the source ZIP file directly from GitHub and extract it to your machine.
-```bash
+'''bash
 git clone [https://github.com/YOUR_USERNAME/Ai-File-Sorter.git](https://github.com/YOUR_USERNAME/Ai-File-Sorter.git)
-cd Ai-File-Sorter
-2. Start and Warm Up the AI Model
+cd Ai-File-Sorter'''
+### 2. Start and Warm Up the AI Model
 Ensure Ollama is running on your machine, then pull and pre-load the ultra-fast llama3.2:1b model. This eliminates cold-start lag when you trigger a deep scan:
 
-Bash
-ollama run llama3.2:1b "Ready?"
+'''Bash
+ollama run llama3.2:1b "Ready?"'''
 Once the model replies, type /exit to return to your normal terminal. The model will remain warm in your system RAM.
 
-3. Set Up an Isolated Virtual Environment
+### 3. Set Up an Isolated Virtual Environment
 Creating a virtual environment ensures the application dependencies don't interfere with your computer's other global Python setups.
 
 Windows (PowerShell):
 
-PowerShell
+'''PowerShell
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.venv\Scripts\Activate.ps1'''
 macOS / Linux:
 
-Bash
+'''Bash
 python3 -m venv .venv
-source .venv/bin/activate
-4. Install Runtime Dependencies
+source .venv/bin/activate'''
+
+###4. Install Runtime Dependencies
 Upgrade your local package manager and pull down the official Ollama library interface module:
 
-Bash
+'''Bash
 pip install --upgrade pip
-pip install ollama
-5. Launch the Application
+pip install ollama'''
+
+### 5. Launch the Application
 Execute the script from your active environment terminal prompt:
 
-Bash
+'''Bash
 python cleaner.py
-(Windows users who want to run the application cleanly without leaving a black console window hanging open in the background can launch using pythonw cleaner.py instead).
+(Windows users who want to run the application cleanly without leaving a black console window hanging open in the background can launch using pythonw cleaner.py instead).'''
 
-⚠️ Disclaimer & Limitations
+###⚠️ Disclaimer & Limitations
 Local Processing Scope: This application runs entirely on your local machine. No file names, data metadata, or directory structures are uploaded to the internet or sent to third-party endpoints.
 
 AI Inaccuracy Variance: Because sorting is handled by a lightweight generative AI model (llama3.2:1b), classification logic is non-deterministic. The AI can occasionally hallucinate path assignments, misinterpret context clues within a string, or make inconsistent choices across large file sets.

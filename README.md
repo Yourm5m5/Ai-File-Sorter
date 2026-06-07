@@ -1,15 +1,15 @@
-# Ai-File-Sorter 🧠✨
+# Ai-File-Sorter 
 
 This is a file sorter that uses local AI. It scans, checks, and organizes messy directory structures—categorizing raw files into clean, logical subfolders while automatically protecting programming projects and sensitive files.
 
 ---
 
-## 🔍 What is the File Sorter?
+## What is the File Sorter?
 The **Ai-File-Sorter** is a desktop automation utility built in Python using the Tkinter GUI framework. It acts as an automated digital housekeeper for crowded storage areas (like your Downloads folder). Instead of relying strictly on rigid, hardcoded file extension paths, it leverages a locally running Large Language Model (LLM) to intelligently read filenames, evaluate context, and automatically determine the most logical structural destination for your data.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 The application processes files using a strict, multi-tier execution pipeline designed for safety and speed:
 
 1. **Project Guard Rails & Exclusions:** The script scans your target path. If it identifies folder structures containing development markers (like `.git`, `node_modules`, `venv`, or project solution files), it pauses and prompts you with a confirmation window. You can uncheck these folders so your active code workspaces stay untouched.
@@ -19,7 +19,7 @@ The application processes files using a strict, multi-tier execution pipeline de
 
 ---
 
-## 🚀 Step-by-Step Installation & Setup
+## Step-by-Step Installation & Setup
 
 Follow these quick terminal steps to get the environment configured and the application running.
 
@@ -80,7 +80,7 @@ python cleaner.py
 
 (Windows users who want to run the application cleanly without leaving a black console window hanging open in the background can launch using pythonw cleaner.py instead).'''
 
-###⚠️ Disclaimer & Limitations
+### Disclaimer & Limitations
 Local Processing Scope: This application runs entirely on your local machine. No file names, data metadata, or directory structures are uploaded to the internet or sent to third-party endpoints.
 
 AI Inaccuracy Variance: Because sorting is handled by a lightweight generative AI model (llama3.2:1b), classification logic is non-deterministic. The AI can occasionally hallucinate path assignments, misinterpret context clues within a string, or make inconsistent choices across large file sets.
